@@ -1,0 +1,11 @@
+
+<div class="card" style="width: 18rem;">
+  <!-- <img class="card-img-top" [src]="Meal.Image" alt="Card image cap"> -->
+    <ng-content select="img"></ng-content>
+
+  <div class="card-body">
+    <h5 class="card-title">{{Meal.name}}</h5>
+    <p class="card-text">{{Meal.description}}</p>
+    <button (click)="displayMealDescription(Meal.description)"  class="btn btn-primary">Get Description</button>
+  </div>
+</div>

@@ -3,18 +3,22 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from "./header/header.component";
+import { MealsComponent } from "./meals/meals.component";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    providers: [
+        provideClientHydration()
+    ],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HeaderComponent,
+        MealsComponent
+    ]
 })
 export class AppModule { }
